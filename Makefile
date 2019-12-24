@@ -31,8 +31,8 @@ LFLAGS = -L $(SUPPORT_FILE_DIRECTORY) -Wl,-Map,"blink.map" -Wl,--gc-sections
 all: ${OBJECTS}
 	$(CC) $(CFLAGS) $(LFLAGS) $? -o $(DEVICE).out
 
-debug: all
-	$(GDB) $(DEVICE).out
+#debug: all
+#	$(GDB) $(DEVICE).out
 
 clean:
 	rm -fr *.o *.out *.map $(OBJS)

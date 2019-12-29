@@ -1,0 +1,5 @@
+#include <msp430g2553.h>
+
+#define STOP_WATCHDOG_TIMER	(WDTCTL = (WDTPW | WDTHOLD))
+#define P1_BIT0_OUTPUT		(P1DIR = 0x01)
+#define TOGGLE_BIT0		(P1OUT ^= 0X01)
